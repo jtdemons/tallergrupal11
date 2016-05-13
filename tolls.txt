@@ -1,0 +1,39 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- Servidor: localhost
+-- Tiempo de generación: 12-05-2016 a las 22:21:45
+-- Versión del servidor: 5.1.37
+-- Versión de PHP: 5.3.0
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Base de datos: `tolls`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `encuestas`
+--
+
+CREATE TABLE IF NOT EXISTS `encuestas` (
+  `Id` int(10) NOT NULL,
+  `token` varchar(50) NOT NULL,
+  `Nombre` varchar(20) NOT NULL,
+  `Estado` int(1) NOT NULL,
+  `Opciones` int(1) NOT NULL,
+  `FechaInicio` date NOT NULL,
+  `FechaFin` date NOT NULL,
+  PRIMARY KEY (`Id`),
+  KEY `Opciones` (`Opciones`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `encuestas`
+--
+
+INSERT INTO `encuestas` (`Id`, `token`, `Nombre`, `Estado`, `Opciones`, `FechaInicio`, `FechaFin`) VALUES
+(1, '', 'preferencias de tipo', 1, 0, '2016-05-12', '2016-05-14');
